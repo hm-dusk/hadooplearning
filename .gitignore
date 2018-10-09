@@ -1,8 +1,20 @@
+# Operating System Files
 .DS_Store
 Thumbs.db
-db.json
-*.log
-node_modules/
-public/
-.deploy*/
-.idea/
+
+# Build Files #
+bin
+target
+build
+
+# Eclipse Project Files #
+*.classpath
+*.project
+*.settings
+
+# IntelliJ IDEA Files #
+
+*.iml
+*.ipr
+*.iws
+*.idea
