@@ -13,4 +13,5 @@ public class SqlSentence {
 	public static String DOUBLE = "java.lang.Double";
 	public static String BIG_DECIMAL = "java.math.BigDecimal";
 	public static String DATE = "java.util.Date";
+	public static String BOOLEAN = "java.lang.Boolean";
 }

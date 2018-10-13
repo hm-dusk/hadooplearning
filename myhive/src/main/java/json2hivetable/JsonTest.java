@@ -55,6 +55,14 @@ public class JsonTest {
 			jsonMete.setKey(string);
 			Object o = jsonObject.get(string);
 			String name = o.getClass().getName();
+			//json值为json类，则进行子节点的挂载
+			if (name.equals(SqlSentence.JSONOBJECT)){
+				JsonMetaNode jsonMetaNode = new JsonMetaNode();
+				jsonMetaNode.setKey(string);
+
+				//将该节点添加进父节点的子节点list中
+				jsonMete.setChildren(Lists.newArrayList(jsonMetaNode));
+			}
 			jsonMete.setValueType(name);
 			jsonMetaNodeList.add(jsonMete);
 
@@ -62,5 +70,11 @@ public class JsonTest {
 		//　调用建表语句的方法
 		String sqlCreateTable = SqlUtil.createTable("sql_test", jsonMetaNodeList);
 		System.out.println(sqlCreateTable);
+	}
+
+	private JsonMetaNode parseJsonNode(JSONObject jsonObject, JsonMetaNode jsonMetaNode){
+//		jsonObject.ma
+
+		return jsonMetaNode;
 	}
 }

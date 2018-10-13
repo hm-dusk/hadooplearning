@@ -3,16 +3,25 @@ package json2hivetable;
 import java.util.List;
 
 /**
+ * 解析出的json节点
+ *
  * @author liming
  * @date Created in 2018/9/29 9:25
  */
 public class JsonMetaNode {
+
 	private String key;
+	/**
+	 * json节点值类型
+	 */
 	private String valueType;
 	/**
 	 * 数据库中的列名
 	 */
 	private String dbColName;
+	/**
+	 * 子节点信息
+	 */
 	private List<JsonMetaNode> children;
 
 
