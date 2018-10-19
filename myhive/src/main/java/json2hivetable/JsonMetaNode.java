@@ -10,13 +10,16 @@ import java.util.List;
  */
 public class JsonMetaNode {
 
+	/**
+	 * 节点键
+	 */
 	private String key;
 	/**
 	 * json节点值类型
 	 */
 	private String valueType;
 	/**
-	 * 数据库中的列名
+	 * 数据库中的列名（该节点值）
 	 */
 	private String dbColName;
 	/**

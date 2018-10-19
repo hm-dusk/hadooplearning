@@ -27,7 +27,7 @@ public class JsonTest {
 		try {
 			fileReader = new FileReader(file);
 		} catch (FileNotFoundException e) {
-			logger.error("文件不存在",e.getMessage(),e);
+			logger.error("文件不存在", e.getMessage(), e);
 		}
 		assert fileReader != null;
 		BufferedReader bufferedReader = new BufferedReader(fileReader);
@@ -56,7 +56,7 @@ public class JsonTest {
 			Object o = jsonObject.get(string);
 			String name = o.getClass().getName();
 			//json值为json类，则进行子节点的挂载
-			if (name.equals(SqlSentence.JSONOBJECT)){
+			if (name.equals(SqlSentence.JSON_OBJECT)) {
 				JsonMetaNode jsonMetaNode = new JsonMetaNode();
 				jsonMetaNode.setKey(string);
 
@@ -72,8 +72,17 @@ public class JsonTest {
 		System.out.println(sqlCreateTable);
 	}
 
-	private JsonMetaNode parseJsonNode(JSONObject jsonObject, JsonMetaNode jsonMetaNode){
+	private JsonMetaNode parseJsonNode(JSONObject jsonObject, JsonMetaNode jsonMetaNode) {
 //		jsonObject.ma
+		String type = jsonMetaNode.getValueType();
+		if (type.equals(SqlSentence.JSON_OBJECT)) {
+			JsonMetaNode child = new JsonMetaNode();
+//			child.setKey();
+
+		}else if(type.equals(SqlSentence.JSON_ARRAY)){
+			return jsonMetaNode;
+		}
+		jsonMetaNode.getDbColName();
 
 		return jsonMetaNode;
 	}

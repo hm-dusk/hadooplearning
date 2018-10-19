@@ -17,10 +17,4 @@
 		<name>hbase.zookeeper.quorum</name>
 		<value>hadoopmaster:2181,hadoop001:2181,hadoop002:2181</value>
 	</property>
-	<!-- 不需要
-	<property>
-		<name>hbase.zookeeper.property.dataDir</name>
-		<value>/home/centos/hbase/zk</value>
-	</property>
-	-->
 </configuration>

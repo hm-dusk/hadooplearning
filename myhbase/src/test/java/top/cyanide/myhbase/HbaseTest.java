@@ -77,10 +77,10 @@ public class HbaseTest {
 	@Test
 	public void testPut() throws Exception {
 		//得到表对象
-		TableName tname = TableName.valueOf("ns1:t1");
-		Table t = conn.getTable(tname);
-		byte[] rowkey = Bytes.toBytes("row2");
-		Put put = new Put(rowkey);
+		TableName tName = TableName.valueOf("ns1:t1");
+		Table t = conn.getTable(tName);
+		byte[] rowKey = Bytes.toBytes("row2");
+		Put put = new Put(rowKey);
 		//row2/f1:id/xx= 2
 		put.addColumn(Bytes.toBytes("f1"),Bytes.toBytes("id"),Bytes.toBytes(2));
 		//row2/f1:name/xx= 'tomas'
